@@ -6,4 +6,13 @@ html {
 
 body {
   background-color: #eee8ee;
-  font-family: monospace; }
+  font-family: "Consolas", "monaco", monospace; }
+  body div.container {
+    padding-bottom: 4em; }
+    @media only screen and (min-width: 700px) {
+      body div.container {
+        width: 800px;
+        margin: 0 auto; } }
+
+h1 {
+  text-align: center; }
