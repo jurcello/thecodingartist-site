@@ -10,6 +10,7 @@ from wagtail.wagtailcore import blocks
 from wagtail.wagtailadmin.edit_handlers import FieldPanel, StreamFieldPanel
 from wagtail.wagtailimages import blocks as imageblocks
 from wagtail.wagtailembeds.blocks import EmbedBlock
+from wagtailcodeblock.blocks import CodeBlock
 
 class BlogPage(Page):
     body = RichTextField(blank=True)
@@ -31,7 +32,7 @@ class BlogPost(Page):
         ('paragraph', blocks.RichTextBlock(template="blog/block/paragraph.html")),
         ('image', imageblocks.ImageChooserBlock(template="blog/block/image.html")),
         ('embed', EmbedBlock(template="blog/block/embed.html")),
-        ('code', blocks.TextBlock(template="blog/block/code.html")),
+        ('code', CodeBlock()),
     ])
 
     content_panels = Page.content_panels + [
