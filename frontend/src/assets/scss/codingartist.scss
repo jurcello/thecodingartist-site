@@ -1,8 +1,10 @@
 @import "bourbon";
 @import "neat";
 
+$body_background: #eee8ee;
+
 body {
-  background-color: #eee8ee;
+  background-color: $body_background;
   font-family: $font-stack-consolas;
 
   div.container {
@@ -18,6 +20,27 @@ body {
 h1 {
   text-align: center;
 }
+
+div.post-content {
+  margin-bottom: 4em;
+
+  display: flex;
+  flex-direction: column;
+
+  code {
+    padding-left: 20px;
+    background-color: lighten($body_background, 20%);
+  }
+
+  figure {
+    background-color: white;
+    margin: 0;
+    margin-bottom: 2em;
+    padding: 1em;
+    text-align: center;
+  }
+}
+
 
 nav {
   ul {

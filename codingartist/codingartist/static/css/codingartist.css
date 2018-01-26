@@ -17,6 +17,20 @@ body {
 h1 {
   text-align: center; }
 
+div.post-content {
+  margin-bottom: 4em;
+  display: flex;
+  flex-direction: column; }
+  div.post-content code {
+    padding-left: 20px;
+    background-color: white; }
+  div.post-content figure {
+    background-color: white;
+    margin: 0;
+    margin-bottom: 2em;
+    padding: 1em;
+    text-align: center; }
+
 nav ul {
   display: flex;
   padding: 0;
