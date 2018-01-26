@@ -19,7 +19,6 @@ gulp.task("sass", function() {
       includePaths: [bourbon, neat]
     }))
     .pipe(gulp.dest("./codingartist/codingartist/static/css"))
-    .pipe(connect.reload());
 });
 
 gulp.task("connect", function() {
@@ -30,6 +29,6 @@ gulp.task("connect", function() {
   });
 });
 
-gulp.task("default", ["sass", "connect"], function() {
+gulp.task("default", ["sass"], function() {
   gulp.watch(paths.scss, ["sass"]);
 })

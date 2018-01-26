@@ -1,4 +1,5 @@
 {% load static wagtailuserbar %}
+{% load codingartistapp_tags menu_tags%}
 
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -32,6 +33,11 @@
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
         <div class="container">
+            <h1>{% sitename %}</h1>
+            <nav>
+                {% main_menu %}
+            </nav>
+
             {% block content %}{% endblock %}
         </div>
         {# Global javascript #}
