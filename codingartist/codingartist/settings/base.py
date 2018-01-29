@@ -99,13 +99,7 @@ WSGI_APPLICATION = 'codingartist.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
+# The databases are defined in the environment specific files.
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
@@ -146,4 +140,4 @@ WAGTAIL_SITE_NAME = "codingartist"
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-BASE_URL = 'http://example.com'
+BASE_URL = 'http://thecodingartist.com'
