@@ -27,6 +27,9 @@ services:
       - media_ca:/media/codingartist
     environment:
       VIRTUAL_HOST: 'www.thecodingartist.com, thecodingartist.com, thecodingartist.nl, www.thecodingartist.nl'
+      LETSENCRYPT_HOST: 'www.thecodingartist.com, thecodingartist.com'
+      LETSENCRYPT_EMAIL: 'info@jurdevries.nl'
+
 
 volumes:
   database_ca:
