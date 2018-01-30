@@ -1,5 +1,5 @@
 {% load static wagtailuserbar %}
-{% load baseapp_tags menu_tags%}
+{% load baseapp_tags menu_tags compress %}
 
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -23,7 +23,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {# Global stylesheets #}
+    {% compress css %}
         <link rel="stylesheet" type="text/css" href="{% static 'css/codingartist.css' %}" />
+    {% endcompress %}
         <link rel="shortcut icon" type="image/png" href="{% static 'base/favicon.ico' %}" />
 
         {% block extra_css %}

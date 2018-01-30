@@ -17,7 +17,7 @@ SECRET_KEY = '$_1v=t)iy^z++27@od=2srl&y8%7d$blw56fuqtjqobucf=12y'
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
+COMPRESS_ENABLED = True
 
 try:
     from .local import *
