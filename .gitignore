@@ -137,3 +137,5 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+/codingartist/db.sqlite3
+/docker-compose.yml

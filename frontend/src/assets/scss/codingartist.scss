@@ -1,0 +1,56 @@
+@import "bourbon";
+@import "neat";
+
+$body_background: #eee8ee;
+
+body {
+  background-color: $body_background;
+  font-family: $font-stack-consolas;
+
+  div.container {
+    padding-bottom: 4em;
+
+    @media only screen and (min-width: 700px) {
+      width: 800px;
+      margin: 0 auto;
+    }
+  }
+}
+
+h1 {
+  text-align: center;
+}
+
+div.post-content {
+  margin-bottom: 4em;
+
+  display: flex;
+  flex-direction: column;
+
+  code {
+    padding-left: 20px;
+    background-color: lighten($body_background, 20%);
+  }
+
+  figure {
+    background-color: white;
+    margin: 0;
+    margin-bottom: 2em;
+    padding: 1em;
+    text-align: center;
+  }
+}
+
+
+nav {
+  ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style: none;
+      margin: 0 10px;
+    }
+  }
+}

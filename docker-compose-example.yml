@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+  web:
+    build:
+      dockerfile: ./docker/python/Dockerfile
+      context: ./
+    ports:
+      - "8000:8000"
+    volumes:
+      - database_ca:/databases/coding_artist
+      - media_ca:/media/codingartist
+    environment:
+      SECRET_KEY: secret_key
+      DJANGO_SETTINGS_MODULE: codingartist.settings.production
+  nginx:
+    build:
+      dockerfile: ./docker/nginx/Dockerfile
+      context: ./
+    links:
+      - web
+    expose:
+      - 80
+    depends_on:
+      - web
+    volumes:
+      - media_ca:/media/codingartist
+    environment:
+      VIRTUAL_HOST: 'www.thecodingartist.com, thecodingartist.com, thecodingartist.nl, www.thecodingartist.nl'
+      LETSENCRYPT_HOST: 'www.thecodingartist.com, thecodingartist.com'
+      LETSENCRYPT_EMAIL: 'info@jurdevries.nl'
+
+
+volumes:
+  database_ca:
+  media_ca:
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
