@@ -1,4 +1,4 @@
-{% load static wagtailuserbar %}
+{% load static wagtailuserbar wagtailmetadata_tags %}
 {% load baseapp_tags menu_tags compress %}
 
 <!DOCTYPE html>
@@ -19,8 +19,8 @@
                 {% endwith %}
             {% endblock %}
         </title>
-        <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% meta_tags %}
 
         {# Global stylesheets #}
     {% compress css %}

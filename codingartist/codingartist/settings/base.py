@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'wagtail.wagtailcore',
 
     'wagtail.contrib.modeladmin',
+    'wagtail.contrib.settings',
     'wagtailmenus',
 
     'modelcluster',
@@ -57,7 +58,8 @@ INSTALLED_APPS = [
 
     'blog',
     'wagtailcodeblock',
-    'compressor'
+    'compressor',
+    'wagtailmetadata',
 ]
 
 MIDDLEWARE = [
