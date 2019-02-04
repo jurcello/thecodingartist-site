@@ -20,6 +20,7 @@ Unidecode==1.0.22
 urllib3==1.22
 wagtail==1.13.1
 wagtail-metadata==0.3.2
+wagtail-themes==0.2.0
 wagtailcodeblock==0.4.2
 wagtailmenus==2.6
 webencodings==0.5.1

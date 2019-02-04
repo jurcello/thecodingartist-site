@@ -18,6 +18,10 @@ ALLOWED_HOSTS = [
     'localhost',
     '.thecodingartist.nl',
     '.thecodingartist.com',
+    '.photonicmusic.nl',
+    '.photonicorchestra.com',
+    '.photonicorchestra.nl',
+    '.photonicorchestra.eu',
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
