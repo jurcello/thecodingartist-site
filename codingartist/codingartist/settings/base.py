@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'wagtailcodeblock',
     'compressor',
     'wagtailmetadata',
+    'wagtailthemes',
 ]
 
 MIDDLEWARE = [
@@ -73,6 +74,7 @@ MIDDLEWARE = [
 
     'wagtail.wagtailcore.middleware.SiteMiddleware',
     'wagtail.wagtailredirects.middleware.RedirectMiddleware',
+    'wagtailthemes.middleware.ThemeMiddleware',
 ]
 
 ROOT_URLCONF = 'codingartist.urls'
@@ -83,7 +85,6 @@ TEMPLATES = [
         'DIRS': [
             os.path.join(PROJECT_DIR, 'templates'),
         ],
-        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -92,6 +93,11 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'wagtailmenus.context_processors.wagtailmenus',
             ],
+            'loaders': [
+                'wagtailthemes.loaders.ThemeLoader',
+                'django.template.loaders.filesystem.Loader',
+                'django.template.loaders.app_directories.Loader',
+            ]
         },
     },
 ]
@@ -153,3 +159,9 @@ WAGTAIL_SITE_NAME = "codingartist"
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://thecodingartist.com'
+
+WAGTAIL_THEME_PATH = 'themes'
+WAGTAIL_THEMES = [
+    ('codingartist', 'Coding artist'),
+    ('photonic', 'Photonic orchestra')
+]
