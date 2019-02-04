@@ -1,17 +1,14 @@
 from __future__ import absolute_import, unicode_literals
 
-import datetime
 from django.db import models
 from wagtailmetadata.models import MetadataPageMixin
 from django.utils.timezone import now
 
 from wagtail.core.models import Page
 from wagtail.core.fields import RichTextField, StreamField
-from wagtail.core import blocks
 from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
-from wagtail.images import blocks as imageblocks
-from wagtail.embeds.blocks import EmbedBlock
-from wagtailcodeblock.blocks import CodeBlock
+
+from base.blocks import BaseStreamBlock
 
 class BlogPage(MetadataPageMixin, Page):
     body = RichTextField(blank=True)
@@ -28,13 +25,7 @@ class BlogPage(MetadataPageMixin, Page):
 
 class BlogPost(MetadataPageMixin, Page):
     date = models.DateField(default=now)
-    body = StreamField([
-        ('heading', blocks.CharBlock(template="blog/block/heading.html")),
-        ('paragraph', blocks.RichTextBlock(template="blog/block/paragraph.html")),
-        ('image', imageblocks.ImageChooserBlock(template="blog/block/image.html")),
-        ('embed', EmbedBlock(template="blog/block/embed.html")),
-        ('code', CodeBlock()),
-    ])
+    body = StreamField(BaseStreamBlock())
 
     content_panels = Page.content_panels + [
         FieldPanel('date'),
