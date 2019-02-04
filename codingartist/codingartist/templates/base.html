@@ -20,7 +20,7 @@
             {% endblock %}
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {% if metatags %}{% meta_tags %}{% endif %}
+        {% meta_tags %}
 
         {# Global stylesheets #}
         <link rel="stylesheet" type="text/css" href="{% static 'css/codingartist.css' %}" />
