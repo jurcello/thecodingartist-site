@@ -9,7 +9,7 @@ var autoprefix = require("gulp-autoprefixer"),
 
 // Watch the scss paths.
 var paths = {
-  scss: ["./frontend/src/assets/scss/*.scss"]
+  scss: ["./src/assets/scss/*.scss"]
 };
 
 gulp.task("sass", function() {
@@ -18,7 +18,7 @@ gulp.task("sass", function() {
       sourceMaps: true,
       includePaths: [bourbon, neat]
     }))
-    .pipe(gulp.dest("./codingartist/codingartist/static/css"))
+    .pipe(gulp.dest("../codingartist/codingartist/static/css"))
 });
 
 gulp.task("connect", function() {
