@@ -5,12 +5,12 @@ from django.db import models
 from wagtailmetadata.models import MetadataPageMixin
 from django.utils.timezone import now
 
-from wagtail.wagtailcore.models import Page
-from wagtail.wagtailcore.fields import RichTextField, StreamField
-from wagtail.wagtailcore import blocks
-from wagtail.wagtailadmin.edit_handlers import FieldPanel, StreamFieldPanel
-from wagtail.wagtailimages import blocks as imageblocks
-from wagtail.wagtailembeds.blocks import EmbedBlock
+from wagtail.core.models import Page
+from wagtail.core.fields import RichTextField, StreamField
+from wagtail.core import blocks
+from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
+from wagtail.images import blocks as imageblocks
+from wagtail.embeds.blocks import EmbedBlock
 from wagtailcodeblock.blocks import CodeBlock
 
 class BlogPage(MetadataPageMixin, Page):
