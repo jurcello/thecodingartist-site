@@ -291,10 +291,26 @@ a, a:visited, a:focus, a:hover {
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center; }
+  justify-content: space-between; }
+  .main--home {
+    justify-content: center; }
   .main__content {
-    width: 800px; }
+    width: 800px;
+    background-color: rgba(125, 125, 125, 0.5);
+    padding: 2em;
+    border-radius: 1em; }
+  .main__show-more {
+    margin-bottom: 2em;
+    display: block;
+    background-size: 100px, 100px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+    background-image: url("/static/images/arrow-down.png"); }
   .main img.page-background_image {
     position: absolute;
     z-index: -1;
@@ -307,5 +323,14 @@ a, a:visited, a:focus, a:hover {
   width: 800px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 4em;
-  padding-bottom: 10em; }
+  padding-top: 2em;
+  padding-bottom: 10em;
+  min-height: 100vh; }
+  .page__close {
+    text-transform: uppercase;
+    text-decoration: underline; }
+  .page a, .page a:visited, .page a:hover {
+    color: black;
+    display: block;
+    text-align: center;
+    padding-bottom: 1em; }

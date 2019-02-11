@@ -17,9 +17,11 @@ class StandardPage(MetadataPageMixin, Page):
         on_delete=models.SET_NULL,
         related_name='+'
     )
+    introduction = StreamField(BaseStreamBlock, blank=True)
     body = StreamField(BaseStreamBlock)
 
     content_panels = Page.content_panels + [
         ImageChooserPanel('background_image'),
+        StreamFieldPanel('introduction'),
         StreamFieldPanel('body'),
     ]
