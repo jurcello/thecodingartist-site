@@ -9,7 +9,11 @@ var autoprefix = require("gulp-autoprefixer"),
 
 // Watch the scss paths.
 var paths = {
-  scss: ["./src/assets/scss/*.scss"]
+  scss: ["./src/assets/scss/*.scss"],
+  scss_watch: [
+      "./src/assets/scss/*.scss",
+      "./src/assets/scss/*/*.scss"
+  ]
 };
 
 gulp.task("sass", function() {
@@ -30,5 +34,5 @@ gulp.task("connect", function() {
 });
 
 gulp.task("default", ["sass"], function() {
-  gulp.watch(paths.scss, ["sass"]);
+  gulp.watch(paths.scss_watch, ["sass"]);
 })

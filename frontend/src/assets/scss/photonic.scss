@@ -1,18 +1,23 @@
 @import "bourbon";
+// Required
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+// Optional
+@import "../../../node_modules/bootstrap/scss/reboot";
+
+@import "photonic/navigation";
 
 $body_background: #eee8e8;
 
 body {
-  background-color: $body_background;
   font-family: $font-stack-consolas;
+  color: white;
 
   div.container {
     padding-bottom: 4em;
 
-    @media only screen and (min-width: 700px) {
-      width: 800px;
-      margin: 0 auto;
-    }
   }
 }
 
@@ -20,36 +25,73 @@ h1 {
   text-align: center;
 }
 
-div.post-content {
-  margin-bottom: 4em;
+a, a:visited, a:focus, a:hover {
+  color: white;
+}
 
+.container {
+  position: relative;
+}
+
+.main {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 
-  code {
-    padding-left: 20px;
-    background-color: lighten($body_background, 20%);
+  &--home {
+    justify-content: center;
   }
 
-  figure {
-    background-color: white;
-    margin: 0;
+  &__content {
+    width: 800px;
+    background-color: rgba(125, 125, 125, 0.5);
+    padding: 2em;
+    border-radius: 1em;
+  }
+
+  &__show-more {
     margin-bottom: 2em;
-    padding: 1em;
-    text-align: center;
+    display: block;
+    background-size: 100px, 100px;
+    width: 100px;
+    height: 100px;
+    @include hide-text;
+    background-image: url("/static/images/arrow-down.png");
+  }
+
+
+  img.page-background_image {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
   }
 }
 
+.page {
+  color: black;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2em;
+  padding-bottom: 10em;
+  min-height: 100vh;
 
-nav {
-  ul {
-    display: flex;
-    padding: 0;
-    margin: 0;
+  &__close {
+    text-transform: uppercase;
+    text-decoration: underline;
 
-    li {
-      list-style: none;
-      margin: 0 10px;
-    }
+  }
+
+  a, a:visited, a:hover {
+    color: black;
+    display: block;
+    text-align: center;
+    padding-bottom: 1em;
   }
 }
