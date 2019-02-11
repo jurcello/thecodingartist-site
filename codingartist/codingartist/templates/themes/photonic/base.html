@@ -34,8 +34,8 @@
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
         <div class="container">
-            <h1>{% sitename %}</h1>
             <nav>
+                <a class="nav__logo" href="/">Photonic orchestra</a>
                 {% main_menu %}
             </nav>
             {% block content %}{% endblock %}

@@ -17,6 +17,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '.thecodingartist.nl',
     '.thecodingartist.com',
+    '.photonicorchestra.local',
     '.photonicmusic.nl',
     '.photonicorchestra.com',
     '.photonicorchestra.nl',
