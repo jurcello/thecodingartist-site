@@ -2,7 +2,7 @@
 {% load wagtailcore_tags wagtailimages_tags %}
 
 
-{% block body_class %}template-homepage{% endblock %}
+{% block body_class %}template-standard-page{% endblock %}
 
 {% block content %}
     <div class="main">
@@ -16,7 +16,6 @@
     </div>
     <div class="page" id="scroll-target">
         <a href="#" class="page__close" id="scroll-to-top">Close</a>
-        <h2>Nog meer</h2>
         {{ page.body }}
     </div>
 {% endblock %}

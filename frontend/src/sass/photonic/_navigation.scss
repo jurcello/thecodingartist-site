@@ -7,22 +7,33 @@ nav {
   height: 100px;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
+  padding: 6em 5em;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  font-size: 1.1em;
 
   ul {
-    align-self: flex-start;
     display: flex;
+    justify-content: flex-end;
     padding: 0;
     margin: 0;
 
     li {
       list-style: none;
-      margin: 0 10px;
-      width: 100px;
+      margin: 0 20px;
 
       a, a:hover {
+        text-transform: uppercase;
         text-decoration: none;
       }
     }
+  }
+
+  a.nav__logo {
+    @include hide-text;
+    background-image: url("/static/images/logo-1140.png");
+    width: 570px;
+    height: 124px;
+    background-size: 570px 124px;
   }
 }

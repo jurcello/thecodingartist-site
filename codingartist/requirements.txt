@@ -12,6 +12,7 @@ djangorestframework==3.9.1
 draftjs-exporter==2.1.5
 html5lib==1.0.1
 idna==2.8
+image==1.5.27
 livereload==2.6.0
 Pillow==5.4.1
 pytz==2018.9
