@@ -1,0 +1,22 @@
+
+/* latin-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Source Sans Pro Italic'), local('SourceSansPro-Italic'), url('/static/fonts/Source_Sans_Pro/SourceSansPro-Italic.ttf') format('ttf');
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url('/static/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf') format('ttf');
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url('/static/fonts/Source_Sans_Pro/SourceSansPro-SemiBold.ttf') format('ttf');
+}

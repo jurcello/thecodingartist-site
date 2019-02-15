@@ -1,0 +1,23 @@
+@mixin dekstop-large-up {
+  @media only screen and (min-width : 1400px) {
+    @content;
+  }
+}
+
+@mixin dekstop-medium {
+  @media only screen and (min-width : 1000px) and (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin dekstop-small-and-smaller {
+  @media only screen and (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin ipad-and-smaller {
+  @media only screen and (max-width : 768px) {
+    @content;
+  }
+}

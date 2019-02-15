@@ -140,3 +140,4 @@ Temporary Items
 /codingartist/db.sqlite3
 /docker-compose.yml
 /codingartist/media/
+/venv/

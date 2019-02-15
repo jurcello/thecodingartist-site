@@ -251,6 +251,39 @@ template {
 [hidden] {
   display: none !important; }
 
+/* latin-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: local("Source Sans Pro Italic"), local("SourceSansPro-Italic"), url("/static/fonts/Source_Sans_Pro/SourceSansPro-Italic.ttf") format("ttf"); }
+
+/* latin-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Source Sans Pro Regular"), local("SourceSansPro-Regular"), url("/static/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf") format("ttf"); }
+
+/* latin-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Source Sans Pro SemiBold"), local("SourceSansPro-SemiBold"), url("/static/fonts/Source_Sans_Pro/SourceSansPro-SemiBold.ttf") format("ttf"); }
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  line-height: 1.45; }
+
+h2, h3 {
+  font-size: 1em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0; }
+
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -279,7 +312,7 @@ template {
   .hamburger.is-active .hamburger-inner,
   .hamburger.is-active .hamburger-inner::before,
   .hamburger.is-active .hamburger-inner::after {
-    background-color: #000; }
+    background-color: white; }
 
 .hamburger-box {
   width: 40px;
@@ -294,7 +327,7 @@ template {
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 40px;
     height: 4px;
-    background-color: #000;
+    background-color: white;
     border-radius: 4px;
     position: absolute;
     transition-property: transform;
@@ -965,30 +998,99 @@ nav {
   height: 100px;
   justify-content: space-between;
   align-items: center;
-  padding: 1em; }
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 6em 5em; }
+  @media only screen and (min-width: 1000px) and (max-width: 1400px) {
+    nav {
+      padding: 3em 2em;
+      font-size: 0.9em; } }
   nav ul {
-    align-self: flex-start;
     display: flex;
+    justify-content: flex-end;
     padding: 0;
     margin: 0; }
     nav ul li {
       list-style: none;
-      margin: 0 10px;
-      width: 100px; }
+      margin: 0 20px; }
+      @media only screen and (min-width: 1000px) and (max-width: 1400px) {
+        nav ul li {
+          margin: 0 10px; } }
       nav ul li a, nav ul li a:hover {
+        text-transform: uppercase;
         text-decoration: none; }
+  nav .hamburger {
+    display: none; }
+  @media only screen and (max-width: 1000px) {
+    nav .hamburger {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: block; }
+    nav .nav__menu {
+      display: none;
+      background-color: rgba(0, 0, 0, 0);
+      transition: background-color 2s; }
+      nav .nav__menu--active {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5); }
+        nav .nav__menu--active ul {
+          flex-direction: column;
+          padding-top: 60px;
+          padding-bottom: 40px; }
+          nav .nav__menu--active ul li {
+            margin-bottom: 15px; } }
+  nav a.nav__logo {
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+    background-image: url("/static/images/logo-1140.png");
+    width: 570px;
+    height: 124px;
+    background-size: 570px 124px; }
+    @media only screen and (min-width: 1000px) and (max-width: 1400px) {
+      nav a.nav__logo {
+        width: 400px;
+        height: 87px;
+        background-size: 400px 87px; } }
+
+.template-homepage a.nav__logo {
+  visibility: hidden; }
+
+.template-homepage h1 {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+  background-image: url("/static/images/logo-1520.png");
+  width: 760px;
+  height: 166px;
+  background-size: 760px 166px; }
+
+.template-homepage .main_content_description {
+  margin-left: 360px;
+  text-align: center;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  opacity: 0.8; }
 
 body {
-  font-family: "Consolas", "monaco", monospace;
-  color: white; }
+  color: rgba(255, 255, 255, 0.9); }
   body div.container {
     padding-bottom: 4em; }
 
 h1 {
+  font-weight: normal;
   text-align: center; }
 
 a, a:visited, a:focus, a:hover {
-  color: white; }
+  color: rgba(255, 255, 255, 0.9); }
 
 .container {
   position: relative; }
@@ -1001,23 +1103,20 @@ a, a:visited, a:focus, a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: space-between; }
-  .main--home {
-    justify-content: center; }
   .main__content {
-    width: 800px;
-    background-color: rgba(125, 125, 125, 0.5);
+    max-width: 800px;
     padding: 2em;
-    border-radius: 1em; }
+    text-align: center; }
   .main__show-more {
     margin-bottom: 2em;
     display: block;
-    background-size: 100px, 100px;
+    background-size: 100px, 72px;
     width: 100px;
-    height: 100px;
+    height: 72px;
     overflow: hidden;
     text-indent: 101%;
     white-space: nowrap;
-    background-image: url("/static/images/arrow-down.png"); }
+    background-image: url("/static/images/more-info-arrow-200.png"); }
   .main img.page-background_image {
     position: absolute;
     z-index: -1;
@@ -1027,7 +1126,8 @@ a, a:visited, a:focus, a:hover {
 
 .page {
   color: black;
-  width: 800px;
+  max-width: 800px;
+  padding: 1em;
   margin-left: auto;
   margin-right: auto;
   padding-top: 2em;
@@ -1041,3 +1141,4 @@ a, a:visited, a:focus, a:hover {
     display: block;
     text-align: center;
     padding-bottom: 1em; }
+

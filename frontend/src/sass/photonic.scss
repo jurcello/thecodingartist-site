@@ -1,20 +1,22 @@
-@import "bourbon";
+@import "../../node_modules/bourbon/core/bourbon";
 // Required
-@import "../../../node_modules/bootstrap/scss/functions";
-@import "../../../node_modules/bootstrap/scss/variables";
-@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
 
 // Optional
-@import "../../../node_modules/bootstrap/scss/reboot";
-
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "photonic/breakpoints";
+@import "photonic/colors";
+@import "photonic/fonts";
+@import "photonic/text";
 @import "photonic/navigation";
+@import "photonic/home";
 
 $body_background: #eee8e8;
 
 body {
-  font-family: $font-stack-consolas;
-  color: white;
-
+  color: $color_white;
   div.container {
     padding-bottom: 4em;
 
@@ -22,11 +24,12 @@ body {
 }
 
 h1 {
+  font-weight: normal;
   text-align: center;
 }
 
 a, a:visited, a:focus, a:hover {
-  color: white;
+  color: $color_white;
 }
 
 .container {
@@ -42,25 +45,20 @@ a, a:visited, a:focus, a:hover {
   align-items: center;
   justify-content: space-between;
 
-  &--home {
-    justify-content: center;
-  }
-
   &__content {
-    width: 800px;
-    background-color: rgba(125, 125, 125, 0.5);
+    max-width: 800px;
     padding: 2em;
-    border-radius: 1em;
+    text-align: center;
   }
 
   &__show-more {
     margin-bottom: 2em;
     display: block;
-    background-size: 100px, 100px;
+    background-size: 100px, 72px;
     width: 100px;
-    height: 100px;
+    height: 72px;
     @include hide-text;
-    background-image: url("/static/images/arrow-down.png");
+    background-image: url("/static/images/more-info-arrow-200.png");
   }
 
 
@@ -75,7 +73,8 @@ a, a:visited, a:focus, a:hover {
 
 .page {
   color: black;
-  width: 800px;
+  max-width: 800px;
+  padding: 1em;
   margin-left: auto;
   margin-right: auto;
   padding-top: 2em;
