@@ -6,6 +6,7 @@
 
 // Optional
 @import "../../node_modules/bootstrap/scss/reboot";
+@import "photonic/breakpoints";
 @import "photonic/colors";
 @import "photonic/fonts";
 @import "photonic/text";
@@ -45,7 +46,7 @@ a, a:visited, a:focus, a:hover {
   justify-content: space-between;
 
   &__content {
-    width: 800px;
+    max-width: 800px;
     padding: 2em;
     text-align: center;
   }
@@ -72,7 +73,8 @@ a, a:visited, a:focus, a:hover {
 
 .page {
   color: black;
-  width: 800px;
+  max-width: 800px;
+  padding: 1em;
   margin-left: auto;
   margin-right: auto;
   padding-top: 2em;

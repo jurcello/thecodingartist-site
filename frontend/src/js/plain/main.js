@@ -18,4 +18,21 @@ export default  () => {
     event.preventDefault();
     scrollToDiv($(".main").first());
   });
+
+  const hamburger = $("button.hamburger");
+  const navMenu = $(".nav__menu");
+
+  hamburger.click(event => {
+    event.preventDefault();
+    console.log(navMenu)
+    if (hamburger.hasClass("is-active")) {
+      hamburger.removeClass("is-active");
+      navMenu.removeClass("nav__menu--active");
+    }
+    else {
+      hamburger.addClass("is-active");
+      navMenu.addClass("nav__menu--active");
+    }
+
+  })
 }
