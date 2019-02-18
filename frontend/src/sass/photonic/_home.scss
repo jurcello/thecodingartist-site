@@ -11,6 +11,21 @@
     width: 760px;
     height: 166px;
     background-size: 760px 166px;
+
+    @include dekstop-small-and-smaller {
+      background-image: url("/static/images/logo-1000.png");
+      width: 500px;
+      height: 114px;
+      background-size: 500px 114px;
+      margin: auto;
+    }
+    @include ipad-and-smaller {
+      background-image: url("/static/images/logo-800.png");
+      width: 400px;
+      height: 87px;
+      background-size: 400px 87px;
+      margin: auto;
+    }
   }
 
   .main_content_description {
@@ -19,5 +34,9 @@
     font-size: 1.1em;
     letter-spacing: 1px;
     opacity: 0.8;
+
+    @include dekstop-small-and-smaller {
+      margin-left: 0;
+    }
   }
 }

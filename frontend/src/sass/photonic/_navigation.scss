@@ -18,6 +18,10 @@ nav {
     font-size: 0.9em;
   }
 
+  @include ipad-and-smaller {
+    padding: 2em 0;
+  }
+
   ul {
     display: flex;
     justify-content: flex-end;
@@ -42,6 +46,12 @@ nav {
     display: none;
   }
 
+  @keyframes nav-background {
+    0% {background-color: rgba(0,0,0, 0.0)}
+    1% {background-color: rgba(0,0,0, 0.0)}
+    100% {background-color: $color_background_transparent_black}
+  }
+
   @include dekstop-small-and-smaller {
     .hamburger {
       position: absolute;
@@ -51,17 +61,19 @@ nav {
     }
 
     .nav__menu {
-      display: none;
+      display: block;
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
       background-color: rgba(0,0,0, 0.0);
-      transition: background-color 2s;
 
       &--active {
-        display: block;
-        position: absolute;
-        width: 100%;
-        top: 0;
-        left: 0;
+        visibility: visible;
         background-color: $color_background_transparent_black;
+        animation-name: nav-background;
+        animation-duration: 0.3s;
 
         ul {
           flex-direction: column;
@@ -88,6 +100,14 @@ nav {
       width: 400px;
       height: 87px;
       background-size: 400px 87px;
+    }
+
+    @include ipad-and-smaller {
+      background-image: url("/static/images/logo-800.png");
+      width: 400px;
+      height: 87px;
+      background-size: 400px 87px;
+      margin: auto;
     }
   }
 }

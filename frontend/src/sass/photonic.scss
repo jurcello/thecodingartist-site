@@ -12,6 +12,7 @@
 @import "photonic/text";
 @import "photonic/navigation";
 @import "photonic/home";
+@import "photonic/standard_page";
 
 $body_background: #eee8e8;
 
@@ -21,11 +22,6 @@ body {
     padding-bottom: 4em;
 
   }
-}
-
-h1 {
-  font-weight: normal;
-  text-align: center;
 }
 
 a, a:visited, a:focus, a:hover {
@@ -45,6 +41,10 @@ a, a:visited, a:focus, a:hover {
   align-items: center;
   justify-content: space-between;
 
+  @include ipad-and-smaller {
+    height: 67vw;
+  }
+
   &__content {
     max-width: 800px;
     padding: 2em;
@@ -59,6 +59,10 @@ a, a:visited, a:focus, a:hover {
     height: 72px;
     @include hide-text;
     background-image: url("/static/images/more-info-arrow-200.png");
+
+    @include ipad-and-smaller {
+      display: none;
+    }
   }
 
 
@@ -68,6 +72,10 @@ a, a:visited, a:focus, a:hover {
     width: 100%;
     height: 100vh;
     object-fit: cover;
+
+    @include ipad-and-smaller {
+      height: auto;
+    }
   }
 }
 
@@ -81,10 +89,13 @@ a, a:visited, a:focus, a:hover {
   padding-bottom: 10em;
   min-height: 100vh;
 
-  &__close {
+  a.page__close {
     text-transform: uppercase;
     text-decoration: underline;
 
+    @include ipad-and-smaller {
+      display: none;
+    }
   }
 
   a, a:visited, a:hover {
