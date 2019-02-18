@@ -9,6 +9,9 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        {% if settings.base.GeneralSettings.google_site_verification_code %}
+            <meta name="google-site-verification" content="{{ settings.base.GeneralSettings.google_site_verification_code }}" />
+        {% endif %}
         <title>
             {% block title %}
                 {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}

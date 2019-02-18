@@ -1312,6 +1312,7 @@ nav {
   overflow: hidden;
   text-indent: 101%;
   white-space: nowrap;
+  text-indent: 110%;
   background-image: url("/static/images/logo-1520.png");
   width: 760px;
   height: 166px;

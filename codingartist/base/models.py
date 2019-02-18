@@ -6,6 +6,8 @@ from .blocks import BaseStreamBlock
 from wagtailmetadata.models import MetadataPageMixin
 from wagtail.images.edit_handlers import ImageChooserPanel
 
+from wagtail.contrib.settings.models import BaseSetting, register_setting
+
 # Create your models here.
 
 
@@ -25,3 +27,7 @@ class StandardPage(MetadataPageMixin, Page):
         StreamFieldPanel('introduction'),
         StreamFieldPanel('body'),
     ]
+
+@register_setting
+class GeneralSettings(BaseSetting):
+    google_site_verification_code = models.TextField(help_text='Google site verification code')
