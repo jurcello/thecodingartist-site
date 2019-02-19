@@ -10,16 +10,21 @@ nav {
   align-items: center;
   letter-spacing: 0.2em;
   font-weight: 600;
-  font-size: 1.1em;
-  padding: 6em 5em;
+  padding: 4em 3em;
+  transition: padding-right, padding-top 1.2s;
+  font-size: 0.9em;
 
   @include dekstop-medium {
     padding: 3em 2em;
-    font-size: 0.9em;
+    transition: padding-right, padding-top 1.2s;
   }
 
   @include ipad-and-smaller {
     padding: 2em 0;
+  }
+
+  @include phone-and-smaller {
+    padding: 3.5em 0;
   }
 
   ul {
@@ -30,7 +35,7 @@ nav {
 
     li {
       list-style: none;
-      margin: 0 20px;
+      margin: 0 15px;
       @include dekstop-medium {
         margin: 0 10px;
       }
@@ -107,6 +112,13 @@ nav {
       width: 400px;
       height: 87px;
       background-size: 400px 87px;
+      margin: auto;
+    }
+    @include phone-and-smaller {
+      background-image: url("/static/images/logo-800.png");
+      width: 300px;
+      height: 66px;
+      background-size: 300px 66px;
       margin: auto;
     }
   }

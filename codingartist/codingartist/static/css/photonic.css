@@ -276,11 +276,15 @@ template {
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0.5px;
-  line-height: 1.45; }
+  line-height: 1.35; }
+  @media only screen and (max-width: 450px) {
+    body {
+      font-size: 14px; } }
 
 h1 {
+  font-size: 1.5em;
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
@@ -1214,15 +1218,19 @@ nav {
   align-items: center;
   letter-spacing: 0.2em;
   font-weight: 600;
-  font-size: 1.1em;
-  padding: 6em 5em; }
+  padding: 4em 3em;
+  transition: padding-right, padding-top 1.2s;
+  font-size: 0.9em; }
   @media only screen and (min-width: 1000px) and (max-width: 1400px) {
     nav {
       padding: 3em 2em;
-      font-size: 0.9em; } }
+      transition: padding-right, padding-top 1.2s; } }
   @media only screen and (max-width: 768px) {
     nav {
       padding: 2em 0; } }
+  @media only screen and (max-width: 450px) {
+    nav {
+      padding: 3.5em 0; } }
   nav ul {
     display: flex;
     justify-content: flex-end;
@@ -1230,7 +1238,7 @@ nav {
     margin: 0; }
     nav ul li {
       list-style: none;
-      margin: 0 20px; }
+      margin: 0 15px; }
       @media only screen and (min-width: 1000px) and (max-width: 1400px) {
         nav ul li {
           margin: 0 10px; } }
@@ -1302,6 +1310,13 @@ nav {
         height: 87px;
         background-size: 400px 87px;
         margin: auto; } }
+    @media only screen and (max-width: 450px) {
+      nav a.nav__logo {
+        background-image: url("/static/images/logo-800.png");
+        width: 300px;
+        height: 66px;
+        background-size: 300px 66px;
+        margin: auto; } }
 
 .template-homepage a.nav__logo {
   visibility: hidden; }
@@ -1331,6 +1346,12 @@ nav {
       height: 87px;
       background-size: 400px 87px;
       margin: auto; } }
+  @media only screen and (max-width: 450px) {
+    .template-homepage h1 {
+      background-image: url("/static/images/logo-800.png");
+      width: 300px;
+      height: 66px;
+      background-size: 300px 66px; } }
 
 .template-homepage .main_content_description {
   margin-left: 360px;
@@ -1374,6 +1395,7 @@ a, a:visited, a:focus, a:hover {
     .main {
       height: 67vw; } }
   .main__content {
+    margin-top: 20em;
     max-width: 800px;
     padding: 2em;
     text-align: center; }

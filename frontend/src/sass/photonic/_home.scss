@@ -27,6 +27,13 @@
       background-size: 400px 87px;
       margin: auto;
     }
+
+    @include phone-and-smaller {
+      background-image: url("/static/images/logo-800.png");
+      width: 300px;
+      height: 66px;
+      background-size: 300px 66px;
+    }
   }
 
   .main_content_description {

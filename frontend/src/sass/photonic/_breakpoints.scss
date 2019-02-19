@@ -21,3 +21,9 @@
     @content;
   }
 }
+
+@mixin phone-and-smaller {
+  @media only screen and (max-width : 450px) {
+    @content;
+  }
+}
