@@ -14,6 +14,11 @@ nav {
   transition: padding-right, padding-top 1.2s;
   font-size: 0.9em;
 
+  a, a:visited, a:focus, a:hover {
+    color: $color_white;
+  }
+
+
   @include dekstop-medium {
     padding: 3em 2em;
     transition: padding-right, padding-top 1.2s;
