@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'wagtail.search',
     'wagtail.admin',
     'wagtail.core',
+    'widget_tweaks',
 
     'wagtail.contrib.modeladmin',
     'wagtail.contrib.settings',

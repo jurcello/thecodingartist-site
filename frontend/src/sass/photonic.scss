@@ -7,6 +7,8 @@
 // Optional
 @import "../../node_modules/bootstrap/scss/reboot";
 @import "../../node_modules/bootstrap/scss/utilities/embed";
+@import "../../node_modules/bootstrap/scss/forms";
+@import "../../node_modules/bootstrap/scss/buttons";
 @import "photonic/breakpoints";
 @import "photonic/colors";
 @import "photonic/fonts";
@@ -14,6 +16,7 @@
 @import "photonic/navigation";
 @import "photonic/home";
 @import "photonic/standard_page";
+@import "photonic/forms";
 
 $body_background: #eee8e8;
 
