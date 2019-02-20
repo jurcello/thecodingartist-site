@@ -37,6 +37,13 @@
     }
   }
 
+
+  @include ipad-and-smaller {
+    .main {
+      justify-content: center;
+    }
+  }
+
   .main_content_description {
     margin-left: 360px;
     text-align: center;

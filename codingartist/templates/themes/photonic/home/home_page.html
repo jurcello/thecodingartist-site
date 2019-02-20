@@ -10,7 +10,14 @@
         <div>&nbsp;</div>
         <div class="main__content">
             <h1>{{ page.title }}</h1>
-            <div class="main_content_description">{{ page.description | richtext}}</div>
+            <div class="main_content_description">
+                {% if page.description %}
+                    {{ page.description | richtext}}
+                {% endif %}
+                {% if page.sub_title_elements %}
+                    {{ page.sub_title_elements}}
+                {% endif %}
+            </div>
         </div>
         <a class="main__show-more" id="show-more" href="#">Show more</a>
     </div>

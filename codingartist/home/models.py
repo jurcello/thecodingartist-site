@@ -17,13 +17,15 @@ class HomePage(MetadataPageMixin, Page):
         on_delete=models.SET_NULL,
         related_name='+'
     )
+    sub_title_elements = StreamField(BaseStreamBlock, blank=True)
     description = RichTextField(blank=True, null=True)
     body = StreamField(BaseStreamBlock, blank=True)
 
     content_panels = Page.content_panels + [
         ImageChooserPanel('background_image'),
+        StreamFieldPanel('sub_title_elements', ),
         FieldPanel('description', classname='full'),
-        StreamFieldPanel('body', )
+        StreamFieldPanel('body', ),
     ]
 
     def get_context(self, request, *args, **kwargs):

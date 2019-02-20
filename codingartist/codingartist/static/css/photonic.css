@@ -2210,6 +2210,10 @@ nav {
       height: 66px;
       background-size: 300px 66px; } }
 
+@media only screen and (max-width: 768px) {
+  .template-homepage .main {
+    justify-content: center; } }
+
 .template-homepage .main_content_description {
   margin-left: 360px;
   text-align: center;
@@ -2262,6 +2266,9 @@ body {
     padding: 2em;
     padding-bottom: 0.5em;
     text-align: center; }
+    @media only screen and (max-width: 768px) {
+      .main__content {
+        margin-top: 0; } }
   .main__show-more {
     margin-bottom: 2em;
     display: block;
@@ -2305,4 +2312,12 @@ body {
     @media only screen and (max-width: 768px) {
       .page a.page__close {
         display: none; } }
+
+div.call-to-action {
+  margin-top: 1.5em; }
+  div.call-to-action a {
+    margin-top: 0.3rem;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    padding: 0.5em;
+    border-radius: 8px; }
 

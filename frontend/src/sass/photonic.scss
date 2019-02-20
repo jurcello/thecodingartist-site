@@ -56,6 +56,10 @@ body {
     padding: 2em;
     padding-bottom: 0.5em;
     text-align: center;
+
+    @include ipad-and-smaller {
+      margin-top: 0;
+    }
   }
 
   &__show-more {
@@ -109,4 +113,16 @@ body {
       display: none;
     }
   }
+}
+
+div.call-to-action
+{
+  margin-top: 1.5em;
+  a {
+    margin-top: 0.3rem;
+    border: 1px solid $color_white;
+    padding: 0.5em;
+    border-radius: 8px;
+  }
+
 }
