@@ -1,6 +1,6 @@
 {% load wagtailimages_tags %}
-<picture>
+<picture class="{{ classname }}">
     <source srcset="{{ dekstop_normal.url }}, {{ desktop_double.url }} 2x"  media="{{ media_desktop }}"/>
     <source srcset="{{ mobile_normal.url }}, {{ mobile_double.url }} 2x"  media="{{ media_mobile }}" />
-    <img src="{{ dekstop_normal.url }}" alt="{{ desktop_normal.alt }}" />
+    <img src="{{ dekstop_normal.url }}" alt="{{ desktop_normal.alt }}"/>
 </picture>

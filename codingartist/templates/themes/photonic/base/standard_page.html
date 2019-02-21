@@ -1,12 +1,12 @@
 {% extends "base.html" %}
-{% load wagtailcore_tags wagtailimages_tags %}
+{% load wagtailcore_tags wagtailimages_tags baseapp_tags %}
 
 
 {% block body_class %}template-standard-page{% endblock %}
 
 {% block content %}
     <div class="main">
-        {% image page.background_image width-1200 class="page-background_image" %}
+        {% responsive_image_db page.background_image 1200 768 "page-background_image" %}
         <div>&nbsp;</div>
         <div class="main__content">
             <h1>{{ page.title }}</h1>
