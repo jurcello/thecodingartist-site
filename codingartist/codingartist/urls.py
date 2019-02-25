@@ -1,5 +1,6 @@
 from __future__ import absolute_import, unicode_literals
 
+from wagtail.contrib.sitemaps.views import sitemap
 from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
@@ -12,7 +13,7 @@ from wagtail.documents import urls as wagtaildocs_urls
 
 urlpatterns = [
     url(r'^django-admin/', admin.site.urls),
-
+    url('^sitemap\.xml$', sitemap),
     url(r'^admin/', include(wagtailadmin_urls)),
     url(r'^documents/', include(wagtaildocs_urls)),
 
