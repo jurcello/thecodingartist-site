@@ -22,6 +22,7 @@ ALLOWED_HOSTS = [
     '.photonicorchestra.com',
     '.photonicorchestra.nl',
     '.photonicorchestra.eu',
+    '.zonsondergangconcert.nl',
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
