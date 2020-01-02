@@ -192,4 +192,5 @@ pyvenv.cfg
 .venv
 pip-selfcheck.json
 
-/frontend/node_modules/
+/frontend-photonic/node_modules/
+/frontend-zon/node_modules/
