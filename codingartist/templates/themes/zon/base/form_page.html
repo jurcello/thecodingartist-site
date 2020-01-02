@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags wagtailimages_tags widget_tweaks baseapp_tags honeypot%}
+
+
+{% block body_class %}template-standard-page{% endblock %}
+
+{% block content %}
+    <div class="main">
+        {% responsive_image_db page.background_image 1200 768 "page-background_image" %}
+        <div>&nbsp;</div>
+        <div class="main__content">
+            <h1>{{ page.title }}</h1>
+        {{ page.introduction}}
+        </div>
+        <a class="main__show-more" id="show-more" href="#">Show more</a>
+    </div>
+    <div class="page" id="scroll-target">
+        <a href="#" class="page__close" id="scroll-to-top">Close</a>
+        <div class="page__mobile">
+            <h1>{{ page.title }}</h1>
+            {{ page.introduction}}
+        </div>
+            {{ page.body }}
+        <div class="form">
+        <form action="{% pageurl page %}" method="POST" role="form">
+            {% csrf_token %}
+            {% render_honeypot_field "phonenumber" %}
+            {% if form.subject.errors %}
+                <ol role="alertdialog">
+                    {% for error in form.subject.errors %}
+                        <li role="alert"><strong>{{ error|escape }}</strong></li>
+                    {% endfor %}
+                </ol>
+            {% endif %}
+
+            {% for field in form %}
+                <div class="field-wrapper" aria-required={% if field.field.required %}"true"{% else %}"false"{% endif %}>
+
+                {{ field.label_tag }}{% if field.field.required %} <span class="required">*</span>{% endif %}
+
+                {{ field|add_class:"form-control" }}
+
+                {% if field.help_text %}
+                    <p class="help">{{ field.help_text|safe }}</p>
+                {% endif %}
+                </div>
+            {% endfor %}
+
+    <input type="submit" class="btn btn-dark" value="Verstuur">
+    </form>
+    </div>
+
+    </div>
+{% endblock %}

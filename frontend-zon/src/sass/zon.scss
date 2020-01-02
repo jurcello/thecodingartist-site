@@ -1,0 +1,157 @@
+@import "../../node_modules/bourbon/core/bourbon";
+// Required
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+// Optional
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/utilities/embed";
+@import "../../node_modules/bootstrap/scss/forms";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "zon/breakpoints";
+@import "zon/colors";
+@import "zon/fonts";
+@import "zon/text";
+@import "zon/navigation";
+@import "zon/home";
+@import "zon/standard_page";
+@import "zon/forms";
+
+$body_background: #eee8e7;
+
+body {
+  color: black;
+  div.container {
+    padding-bottom: 4em;
+
+  }
+}
+
+.container {
+  position: relative;
+}
+
+.main {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  a, a:visited, a:focus, a:hover {
+    color: $color_white;
+  }
+
+
+  @include ipad-and-smaller {
+    height: 67vw;
+  }
+
+  &__content {
+    margin-top: 4em;
+    max-width: 800px;
+    padding: 2em;
+    padding-bottom: 0.5em;
+    text-align: center;
+
+    @include ipad-and-smaller {
+      margin-top: 0;
+    }
+  }
+
+  &__show-more {
+    margin-bottom: 2em;
+    display: block;
+    background-size: 100px, 72px;
+    width: 100px;
+    height: 72px;
+    @include hide-text;
+    background-image: url("/static/images/more-info-arrow-200.png");
+
+    @include ipad-and-smaller {
+      display: none;
+    }
+  }
+
+
+  picture.page-background_image {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+
+    img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      @include ipad-and-smaller {
+        height: auto;
+      }
+    }
+
+    @include ipad-and-smaller {
+      height: auto;
+    }
+  }
+}
+
+.page {
+  color: black;
+  max-width: 800px;
+  padding: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2em;
+  padding-bottom: 10em;
+  min-height: 100vh;
+
+  a.page__close {
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-align: center;
+    padding-bottom: 1em;
+    color: black;
+    display: block;
+
+
+    @include ipad-and-smaller {
+      display: none;
+    }
+  }
+}
+
+div.call-to-action
+{
+  margin-top: 1.5em;
+  a {
+    margin-top: 0.3rem;
+    border: 1px solid $color_white;
+    padding: 0.5em;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+
+}
+
+.rich-text img {
+  max-width: 100%;
+  height: auto;
+}
+
+.responsive-object {
+  position: relative;
+}
+
+.responsive-object iframe,
+.responsive-object object,
+.responsive-object embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

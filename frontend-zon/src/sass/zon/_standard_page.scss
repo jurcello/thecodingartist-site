@@ -1,0 +1,19 @@
+.template-standard-page {
+
+  .main__content {
+    margin-top: 16em;
+  }
+  .page__mobile {
+    display: none;
+  }
+
+  @include ipad-and-smaller {
+    .page__mobile {
+      display: block;
+    }
+
+    .main__content {
+      display: none;
+    }
+  }
+}

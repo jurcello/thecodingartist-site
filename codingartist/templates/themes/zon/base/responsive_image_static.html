@@ -1,0 +1,6 @@
+{% load img %}
+<picture>
+    <source srcset="{% image image_path size %}, {% image image_path size_double %} 2x"  media="{{ media_desktop }}"/>
+    <source srcset="{% image image_path size_mobile %}, {% image image_path size_mobile_double %} 2x" media="{{ media_mobile }}" />
+    <img src="{% image image_path size %}" alt="" />
+</picture>

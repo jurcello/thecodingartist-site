@@ -18,6 +18,7 @@ ALLOWED_HOSTS = [
     '.thecodingartist.nl',
     '.thecodingartist.com',
     '.photonicorchestra.local',
+    '.zonsondergang.local',
     '.photonicmusic.nl',
     '.photonicorchestra.com',
     '.photonicorchestra.nl',

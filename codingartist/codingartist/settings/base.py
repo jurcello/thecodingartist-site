@@ -168,7 +168,8 @@ BASE_URL = 'http://thecodingartist.com'
 WAGTAIL_THEME_PATH = 'themes'
 WAGTAIL_THEMES = [
     ('codingartist', 'Coding artist'),
-    ('photonic', 'Photonic orchestra')
+    ('photonic', 'Photonic orchestra'),
+    ('zon', 'Zonsondergang'),
 ]
 
 HONEYPOT_FIELD_NAME = 'phonenumber'

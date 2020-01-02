@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags wagtailimages_tags widget_tweaks%}
+
+
+{% block body_class %}template-standard-page{% endblock %}
+
+{% block content %}
+    <div class="main">
+        {% image page.background_image width-1200 class="page-background_image" %}
+        <div>&nbsp;</div>
+        <div class="main__content">
+            <h1>{{ page.title }}</h1>
+        {{ page.introduction}}
+        </div>
+        <a class="main__show-more" id="show-more" href="#">Show more</a>
+    </div>
+    <div class="page" id="scroll-target">
+        <a href="#" class="page__close" id="scroll-to-top">Close</a>
+        <div class="page__mobile">
+            <h1>{{ page.title }}</h1>
+            {{ page.introduction}}
+        </div>
+        {{ page.thank_you_text|richtext }}
+        {{ page.body }}
+    </div>
+{% endblock %}
