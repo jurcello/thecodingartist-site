@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils.decorators import method_decorator
+from honeypot.decorators import check_honeypot
 from wagtail.core.models import Page
 from wagtail.core.fields import StreamField, RichTextField
 from .blocks import BaseStreamBlock
@@ -80,3 +82,9 @@ class FormPage(AbstractEmailForm, MetadataPageMixin):
             FieldPanel('subject'),
         ], "Email"),
     ]
+
+    @method_decorator(check_honeypot)
+    def render_landing_page(self, request, form_submission=None, *args, **kwargs):
+        return super().render_landing_page(request, form_submission, *args, **kwargs)
+
+

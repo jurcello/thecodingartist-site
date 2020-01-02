@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "django.contrib.sitemaps",
+    "honeypot",
 
     'blog',
     'wagtailcodeblock',
@@ -169,3 +170,5 @@ WAGTAIL_THEMES = [
     ('codingartist', 'Coding artist'),
     ('photonic', 'Photonic orchestra')
 ]
+
+HONEYPOT_FIELD_NAME = 'phonenumber'

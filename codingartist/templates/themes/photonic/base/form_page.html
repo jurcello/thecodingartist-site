@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load wagtailcore_tags wagtailimages_tags widget_tweaks baseapp_tags%}
+{% load wagtailcore_tags wagtailimages_tags widget_tweaks baseapp_tags honeypot%}
 
 
 {% block body_class %}template-standard-page{% endblock %}
@@ -24,6 +24,7 @@
         <div class="form">
         <form action="{% pageurl page %}" method="POST" role="form">
             {% csrf_token %}
+            {% render_honeypot_field "phonenumber" %}
             {% if form.subject.errors %}
                 <ol role="alertdialog">
                     {% for error in form.subject.errors %}
