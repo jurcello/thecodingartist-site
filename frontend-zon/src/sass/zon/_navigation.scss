@@ -102,31 +102,11 @@ nav {
   }
 
   a.nav__logo {
-    @include hide-text;
-    background-image: url("/static/images/logo-1140.png");
-    width: 570px;
-    height: 124px;
-    background-size: 570px 124px;
-
-    @include dekstop-medium {
-      width: 400px;
-      height: 87px;
-      background-size: 400px 87px;
-    }
+    font-size: 3em;
+    font-style: italic;
 
     @include ipad-and-smaller {
-      background-image: url("/static/images/logo-800.png");
-      width: 400px;
-      height: 87px;
-      background-size: 400px 87px;
-      margin: auto;
-    }
-    @include phone-and-smaller {
-      background-image: url("/static/images/logo-800.png");
-      width: 300px;
-      height: 66px;
-      background-size: 300px 66px;
-      margin: auto;
+      font-size: 1.4em;
     }
   }
 }
