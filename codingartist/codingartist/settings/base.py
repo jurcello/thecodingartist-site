@@ -142,6 +142,8 @@ STATICFILES_DIRS = [
     os.path.join(PROJECT_DIR, 'static'),
 ]
 
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+
 # Compression settings
 COMPRESS_CSS_FILTERS = [
     'compressor.filters.css_default.CssAbsoluteFilter',
