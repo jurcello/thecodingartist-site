@@ -18,7 +18,7 @@ rjsmin==1.0.12
 six==1.11.0
 Unidecode==1.0.22
 urllib3==1.22
-wagtail==1.13.1
+wagtail==2.7.2
 wagtail-metadata==0.3.2
 wagtailcodeblock==0.4.2
 wagtailmenus==2.6
