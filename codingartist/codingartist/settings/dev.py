@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '$_1v=t)iy^z++27@od=2srl&y8%7d$blw56fuqtjqobucf=12y'
 
+os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 COMPRESS_ENABLED = True
