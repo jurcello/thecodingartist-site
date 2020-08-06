@@ -1,5 +1,6 @@
 asgiref==3.2.10
 beautifulsoup4==4.8.2
+bleach==2.1.4
 certifi==2020.6.20
 chardet==3.0.4
 Django==3.0.9
@@ -18,7 +19,9 @@ idna==2.10
 image==1.5.32
 l18n==2018.5
 livereload==2.6.2
+Markdown==2.6.11
 Pillow==7.2.0
+Pygments==2.6.1
 pytz==2020.1
 rcssmin==1.0.6
 requests==2.24.0
@@ -29,10 +32,13 @@ sqlparse==0.3.1
 tornado==6.0.4
 Unidecode==1.1.1
 urllib3==1.25.10
+vue-lexer==0.0.4
 wagtail==2.9.3
+wagtail-markdown==0.6
 wagtail-metadata==3.3.0
 wagtailcodeblock==1.17.1.0
+wagtailfontawesome==1.2.1
 wagtailmenus==3.0.2
 webencodings==0.5.1
-Willow==1.4
+Willow==1.3
 XlsxWriter==1.3.1

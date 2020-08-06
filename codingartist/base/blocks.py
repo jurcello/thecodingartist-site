@@ -2,6 +2,7 @@ from wagtail.core.blocks import (StreamBlock, CharBlock, RichTextBlock, StructBl
 from wagtail.images.blocks import ImageChooserBlock
 from wagtail.embeds.blocks import EmbedBlock
 from wagtailcodeblock.blocks import CodeBlock
+from wagtailmarkdown.blocks import MarkdownBlock
 
 class BaseStreamBlock(StreamBlock):
     heading_block = CharBlock(template="base/blocks/heading.html")
@@ -12,6 +13,7 @@ class BaseStreamBlock(StreamBlock):
     image_block = ImageChooserBlock(template="base/blocks/image.html")
     embed_block = EmbedBlock(template="base/blocks/embed.html")
     code_block = CodeBlock()
+    markdown = MarkdownBlock(icon="code")
     plain_html_block = CharBlock(template="base/blocks/plain_html.html", max_length=4048)
     call_to_action = StructBlock(
         [

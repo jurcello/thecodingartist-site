@@ -65,6 +65,7 @@ INSTALLED_APPS = [
     'compressor',
     'wagtailmetadata',
     'wagtailthemes',
+    'wagtailmarkdown',
 ]
 
 MIDDLEWARE = [
