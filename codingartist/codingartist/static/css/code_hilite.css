@@ -67,3 +67,7 @@
 .codehilite .vi { color: #24292e } /* Name.Variable.Instance */
 .codehilite .vm { color: #005cc5 } /* Name.Variable.Magic */
 .codehilite .il { color: #005cc5 } /* Literal.Number.Integer.Long */
+
+.codehilite {
+    overflow: scroll;
+}
