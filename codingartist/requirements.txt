@@ -17,7 +17,7 @@ requests==2.18.4
 rjsmin==1.0.12
 six==1.11.0
 Unidecode==1.0.22
-urllib3==1.22
+urllib3==1.26.5
 wagtail==1.13.1
 wagtail-metadata==0.3.2
 wagtailcodeblock==0.4.2
