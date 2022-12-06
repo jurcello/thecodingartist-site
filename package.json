@@ -17,7 +17,7 @@
     "bourbon": "^5.0.0",
     "bourbon-neat": "^1.9.0",
     "gulp-autoprefixer": "^4.1.0",
-    "gulp-connect": "^5.2.0",
+    "gulp-connect": "^5.7.0",
     "gulp-sass": "^3.1.0"
   },
   "devDependencies": {
